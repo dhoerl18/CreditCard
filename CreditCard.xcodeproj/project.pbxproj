@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE09D3C4144F4D1200E55142 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE09D3C2144F4D1200E55142 /* CoreText.framework */; };
+		DE09D3C5144F4D1200E55142 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE09D3C3144F4D1200E55142 /* QuartzCore.framework */; };
+		DE33215C14ED459300F92FE3 /* CreditCard.m in Sources */ = {isa = PBXBuildFile; fileRef = DE33214214ED459200F92FE3 /* CreditCard.m */; };
+		DE33215D14ED459300F92FE3 /* CreditCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE33214414ED459200F92FE3 /* CreditCardController.m */; };
+		DE33215E14ED459300F92FE3 /* CreditCardController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE33214514ED459200F92FE3 /* CreditCardController.xib */; };
+		DE33215F14ED459300F92FE3 /* GradientScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE33214714ED459200F92FE3 /* GradientScrollView.m */; };
+		DE33216014ED459300F92FE3 /* amex2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33214914ED459200F92FE3 /* amex2.png */; };
+		DE33216114ED459300F92FE3 /* amex2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33214A14ED459200F92FE3 /* amex2@2x.png */; };
+		DE33216214ED459300F92FE3 /* amexBack2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33214B14ED459200F92FE3 /* amexBack2.png */; };
+		DE33216314ED459300F92FE3 /* amexBack2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33214C14ED459200F92FE3 /* amexBack2@2x.png */; };
+		DE33216414ED459300F92FE3 /* ccBack2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33214D14ED459200F92FE3 /* ccBack2.png */; };
+		DE33216514ED459300F92FE3 /* ccBack2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33214E14ED459200F92FE3 /* ccBack2@2x.png */; };
+		DE33216614ED459300F92FE3 /* dinersClub2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33214F14ED459200F92FE3 /* dinersClub2.png */; };
+		DE33216714ED459300F92FE3 /* dinersClub2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33215014ED459200F92FE3 /* dinersClub2@2x.png */; };
+		DE33216814ED459300F92FE3 /* discover2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33215114ED459200F92FE3 /* discover2.png */; };
+		DE33216914ED459300F92FE3 /* discover2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33215214ED459200F92FE3 /* discover2@2x.png */; };
+		DE33216A14ED459300F92FE3 /* masterCard2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33215314ED459200F92FE3 /* masterCard2.png */; };
+		DE33216B14ED459300F92FE3 /* masterCard2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33215414ED459200F92FE3 /* masterCard2@2x.png */; };
+		DE33216C14ED459300F92FE3 /* unknownCC2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33215514ED459200F92FE3 /* unknownCC2.png */; };
+		DE33216D14ED459300F92FE3 /* unknownCC2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33215614ED459200F92FE3 /* unknownCC2@2x.png */; };
+		DE33216E14ED459300F92FE3 /* visa2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33215714ED459200F92FE3 /* visa2.png */; };
+		DE33216F14ED459300F92FE3 /* visa2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33215814ED459200F92FE3 /* visa2@2x.png */; };
+		DE33217014ED459300F92FE3 /* LCD Mono 2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE33215914ED459200F92FE3 /* LCD Mono 2.ttf */; };
+		DE33217114ED459300F92FE3 /* PlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE33215B14ED459200F92FE3 /* PlaceHolderTextView.m */; };
+		DE33217314ED45C100F92FE3 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE33217214ED45C100F92FE3 /* README.txt */; };
+		DE7119D6144F227F004DE154 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7119D5144F227F004DE154 /* UIKit.framework */; };
+		DE7119D8144F227F004DE154 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7119D7144F227F004DE154 /* Foundation.framework */; };
+		DE7119DA144F227F004DE154 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7119D9144F227F004DE154 /* CoreGraphics.framework */; };
+		DE83845914D3812200677836 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE83845414D3812200677836 /* AppDelegate.m */; };
+		DE83845A14D3812200677836 /* CreditCard-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE83845514D3812200677836 /* CreditCard-Info.plist */; };
+		DE83845B14D3812200677836 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE83845814D3812200677836 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DE09D3C2144F4D1200E55142 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		DE09D3C3144F4D1200E55142 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DE33214114ED459200F92FE3 /* CreditCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCard.h; sourceTree = "<group>"; };
+		DE33214214ED459200F92FE3 /* CreditCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditCard.m; sourceTree = "<group>"; };
+		DE33214314ED459200F92FE3 /* CreditCardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCardController.h; sourceTree = "<group>"; };
+		DE33214414ED459200F92FE3 /* CreditCardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditCardController.m; sourceTree = "<group>"; };
+		DE33214514ED459200F92FE3 /* CreditCardController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditCardController.xib; sourceTree = "<group>"; };
+		DE33214614ED459200F92FE3 /* GradientScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientScrollView.h; sourceTree = "<group>"; };
+		DE33214714ED459200F92FE3 /* GradientScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientScrollView.m; sourceTree = "<group>"; };
+		DE33214914ED459200F92FE3 /* amex2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amex2.png; sourceTree = "<group>"; };
+		DE33214A14ED459200F92FE3 /* amex2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amex2@2x.png"; sourceTree = "<group>"; };
+		DE33214B14ED459200F92FE3 /* amexBack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amexBack2.png; sourceTree = "<group>"; };
+		DE33214C14ED459200F92FE3 /* amexBack2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amexBack2@2x.png"; sourceTree = "<group>"; };
+		DE33214D14ED459200F92FE3 /* ccBack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ccBack2.png; sourceTree = "<group>"; };
+		DE33214E14ED459200F92FE3 /* ccBack2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ccBack2@2x.png"; sourceTree = "<group>"; };
+		DE33214F14ED459200F92FE3 /* dinersClub2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dinersClub2.png; sourceTree = "<group>"; };
+		DE33215014ED459200F92FE3 /* dinersClub2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dinersClub2@2x.png"; sourceTree = "<group>"; };
+		DE33215114ED459200F92FE3 /* discover2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discover2.png; sourceTree = "<group>"; };
+		DE33215214ED459200F92FE3 /* discover2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "discover2@2x.png"; sourceTree = "<group>"; };
+		DE33215314ED459200F92FE3 /* masterCard2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = masterCard2.png; sourceTree = "<group>"; };
+		DE33215414ED459200F92FE3 /* masterCard2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "masterCard2@2x.png"; sourceTree = "<group>"; };
+		DE33215514ED459200F92FE3 /* unknownCC2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknownCC2.png; sourceTree = "<group>"; };
+		DE33215614ED459200F92FE3 /* unknownCC2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unknownCC2@2x.png"; sourceTree = "<group>"; };
+		DE33215714ED459200F92FE3 /* visa2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visa2.png; sourceTree = "<group>"; };
+		DE33215814ED459200F92FE3 /* visa2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "visa2@2x.png"; sourceTree = "<group>"; };
+		DE33215914ED459200F92FE3 /* LCD Mono 2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LCD Mono 2.ttf"; sourceTree = "<group>"; };
+		DE33215A14ED459200F92FE3 /* PlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceHolderTextView.h; sourceTree = "<group>"; };
+		DE33215B14ED459200F92FE3 /* PlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceHolderTextView.m; sourceTree = "<group>"; };
+		DE33217214ED45C100F92FE3 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		DE7119D1144F227F004DE154 /* CreditCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE7119D5144F227F004DE154 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DE7119D7144F227F004DE154 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DE7119D9144F227F004DE154 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DE83845314D3812200677836 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DE83845414D3812200677836 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DE83845514D3812200677836 /* CreditCard-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CreditCard-Info.plist"; sourceTree = "<group>"; };
+		DE83845614D3812200677836 /* CreditCard-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CreditCard-Prefix.pch"; sourceTree = "<group>"; };
+		DE83845814D3812200677836 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE7119CE144F227F004DE154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE7119DA144F227F004DE154 /* CoreGraphics.framework in Frameworks */,
+				DE09D3C5144F4D1200E55142 /* QuartzCore.framework in Frameworks */,
+				DE09D3C4144F4D1200E55142 /* CoreText.framework in Frameworks */,
+				DE7119D6144F227F004DE154 /* UIKit.framework in Frameworks */,
+				DE7119D8144F227F004DE154 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE33214014ED459200F92FE3 /* CreditCard */ = {
+			isa = PBXGroup;
+			children = (
+				DE33214114ED459200F92FE3 /* CreditCard.h */,
+				DE33214214ED459200F92FE3 /* CreditCard.m */,
+				DE33214314ED459200F92FE3 /* CreditCardController.h */,
+				DE33214414ED459200F92FE3 /* CreditCardController.m */,
+				DE33214514ED459200F92FE3 /* CreditCardController.xib */,
+				DE33214614ED459200F92FE3 /* GradientScrollView.h */,
+				DE33214714ED459200F92FE3 /* GradientScrollView.m */,
+				DE33214814ED459200F92FE3 /* Images */,
+				DE33215914ED459200F92FE3 /* LCD Mono 2.ttf */,
+				DE33215A14ED459200F92FE3 /* PlaceHolderTextView.h */,
+				DE33215B14ED459200F92FE3 /* PlaceHolderTextView.m */,
+			);
+			path = CreditCard;
+			sourceTree = "<group>";
+		};
+		DE33214814ED459200F92FE3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DE33214914ED459200F92FE3 /* amex2.png */,
+				DE33214A14ED459200F92FE3 /* amex2@2x.png */,
+				DE33214B14ED459200F92FE3 /* amexBack2.png */,
+				DE33214C14ED459200F92FE3 /* amexBack2@2x.png */,
+				DE33214D14ED459200F92FE3 /* ccBack2.png */,
+				DE33214E14ED459200F92FE3 /* ccBack2@2x.png */,
+				DE33214F14ED459200F92FE3 /* dinersClub2.png */,
+				DE33215014ED459200F92FE3 /* dinersClub2@2x.png */,
+				DE33215114ED459200F92FE3 /* discover2.png */,
+				DE33215214ED459200F92FE3 /* discover2@2x.png */,
+				DE33215314ED459200F92FE3 /* masterCard2.png */,
+				DE33215414ED459200F92FE3 /* masterCard2@2x.png */,
+				DE33215514ED459200F92FE3 /* unknownCC2.png */,
+				DE33215614ED459200F92FE3 /* unknownCC2@2x.png */,
+				DE33215714ED459200F92FE3 /* visa2.png */,
+				DE33215814ED459200F92FE3 /* visa2@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		DE7119C6144F227F004DE154 = {
+			isa = PBXGroup;
+			children = (
+				DE33217214ED45C100F92FE3 /* README.txt */,
+				DE33214014ED459200F92FE3 /* CreditCard */,
+				DE83845214D3812200677836 /* Demo */,
+				DE7119D4144F227F004DE154 /* Frameworks */,
+				DE7119D2144F227F004DE154 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE7119D2144F227F004DE154 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE7119D1144F227F004DE154 /* CreditCard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE7119D4144F227F004DE154 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE09D3C2144F4D1200E55142 /* CoreText.framework */,
+				DE09D3C3144F4D1200E55142 /* QuartzCore.framework */,
+				DE7119D5144F227F004DE154 /* UIKit.framework */,
+				DE7119D7144F227F004DE154 /* Foundation.framework */,
+				DE7119D9144F227F004DE154 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE83845214D3812200677836 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DE83845314D3812200677836 /* AppDelegate.h */,
+				DE83845414D3812200677836 /* AppDelegate.m */,
+				DE83845514D3812200677836 /* CreditCard-Info.plist */,
+				DE83845614D3812200677836 /* CreditCard-Prefix.pch */,
+				DE83845814D3812200677836 /* main.m */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE7119D0144F227F004DE154 /* CreditCard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE7119EF144F227F004DE154 /* Build configuration list for PBXNativeTarget "CreditCard" */;
+			buildPhases = (
+				DE7119CD144F227F004DE154 /* Sources */,
+				DE7119CE144F227F004DE154 /* Frameworks */,
+				DE7119CF144F227F004DE154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CreditCard;
+			productName = CreditCard;
+			productReference = DE7119D1144F227F004DE154 /* CreditCard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE7119C8144F227F004DE154 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = DE7119CB144F227F004DE154 /* Build configuration list for PBXProject "CreditCard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DE7119C6144F227F004DE154;
+			productRefGroup = DE7119D2144F227F004DE154 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE7119D0144F227F004DE154 /* CreditCard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE7119CF144F227F004DE154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE83845A14D3812200677836 /* CreditCard-Info.plist in Resources */,
+				DE33215E14ED459300F92FE3 /* CreditCardController.xib in Resources */,
+				DE33216014ED459300F92FE3 /* amex2.png in Resources */,
+				DE33216114ED459300F92FE3 /* amex2@2x.png in Resources */,
+				DE33216214ED459300F92FE3 /* amexBack2.png in Resources */,
+				DE33216314ED459300F92FE3 /* amexBack2@2x.png in Resources */,
+				DE33216414ED459300F92FE3 /* ccBack2.png in Resources */,
+				DE33216514ED459300F92FE3 /* ccBack2@2x.png in Resources */,
+				DE33216614ED459300F92FE3 /* dinersClub2.png in Resources */,
+				DE33216714ED459300F92FE3 /* dinersClub2@2x.png in Resources */,
+				DE33216814ED459300F92FE3 /* discover2.png in Resources */,
+				DE33216914ED459300F92FE3 /* discover2@2x.png in Resources */,
+				DE33216A14ED459300F92FE3 /* masterCard2.png in Resources */,
+				DE33216B14ED459300F92FE3 /* masterCard2@2x.png in Resources */,
+				DE33216C14ED459300F92FE3 /* unknownCC2.png in Resources */,
+				DE33216D14ED459300F92FE3 /* unknownCC2@2x.png in Resources */,
+				DE33216E14ED459300F92FE3 /* visa2.png in Resources */,
+				DE33216F14ED459300F92FE3 /* visa2@2x.png in Resources */,
+				DE33217014ED459300F92FE3 /* LCD Mono 2.ttf in Resources */,
+				DE33217314ED45C100F92FE3 /* README.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE7119CD144F227F004DE154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE83845914D3812200677836 /* AppDelegate.m in Sources */,
+				DE83845B14D3812200677836 /* main.m in Sources */,
+				DE33215C14ED459300F92FE3 /* CreditCard.m in Sources */,
+				DE33215D14ED459300F92FE3 /* CreditCardController.m in Sources */,
+				DE33215F14ED459300F92FE3 /* GradientScrollView.m in Sources */,
+				DE33217114ED459300F92FE3 /* PlaceHolderTextView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DE7119ED144F227F004DE154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "/Volumes/Data/git/NSAttributedString-Additions-for-HTML/Classes";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DE7119EE144F227F004DE154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "/Volumes/Data/git/NSAttributedString-Additions-for-HTML/Classes";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE7119F0144F227F004DE154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/CreditCard-Prefix.pch";
+				INFOPLIST_FILE = "Demo/CreditCard-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DE7119F1144F227F004DE154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/CreditCard-Prefix.pch";
+				INFOPLIST_FILE = "Demo/CreditCard-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE7119CB144F227F004DE154 /* Build configuration list for PBXProject "CreditCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE7119ED144F227F004DE154 /* Debug */,
+				DE7119EE144F227F004DE154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE7119EF144F227F004DE154 /* Build configuration list for PBXNativeTarget "CreditCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE7119F0144F227F004DE154 /* Debug */,
+				DE7119F1144F227F004DE154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE7119C8144F227F004DE154 /* Project object */;
+}
