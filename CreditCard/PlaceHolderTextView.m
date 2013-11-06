@@ -33,31 +33,16 @@
 
 #import "PlaceHolderTextView.h"
 
-
 @implementation PlaceHolderTextView
-{
-	// BOOL recomputeOffset;
-}
-@synthesize text;
-@synthesize font;
-@synthesize showTextOffset;
-@synthesize offset;
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
+#pragma mark - Property accessors
 
 - (void)setText:(NSString *)newText
 {
-	if(newText == text) return;
+	if (newText == self.text) return;
 
-	BOOL animate = (text && [newText length] > [text length]);
-	text = newText;
+	BOOL animate = (self.text && [newText length] > [self.text length]);
+	_text = newText;
 	
 	if(animate) {
 		self.alpha = 0.0;
@@ -68,19 +53,21 @@
 
 - (void)setShowTextOffset:(NSUInteger)newOffset
 {
-	showTextOffset = newOffset;
+	_showTextOffset = newOffset;
 	[self setNeedsDisplay];
 }
 
+#pragma mark - drawRect override
+
 - (void)drawRect:(CGRect)rect
 {
-	CGRect r = offset;
+	CGRect r = self.offset;
 	
 	// We know that this strings begins with a series of 'X' and ' ' characters before using others
 	// So we render the X's as boxes and the others as real characters
 
-	NSString *clearText = [text substringToIndex:showTextOffset];
-	NSString *grayText = [text substringWithRange:NSMakeRange(showTextOffset, [text length] - showTextOffset)];
+	NSString *clearText = [self.text substringToIndex:self.showTextOffset];
+	NSString *grayText = [self.text substringWithRange:NSMakeRange(self.showTextOffset, [self.text length] - self.showTextOffset)];
 	
     CGContextRef context = UIGraphicsGetCurrentContext();
 
@@ -101,9 +88,16 @@
 //NSLog(@"origin: origin=%@", NSStringFromCGPoint(r.origin));	
 	if([clearText length]) {
 //NSLog(@"ORIGIN=%@ DRAWSIZE=%@ SIZESIZE=%@", NSStringFromCGPoint(offset.origin), NSStringFromCGSize([clearText drawAtPoint:offset.origin withFont:font]), NSStringFromCGSize([clearText sizeWithFont:font]) );
-		r.origin.x += [clearText drawAtPoint:offset.origin withFont:font].width;
+        if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+            r.origin.x += [clearText drawAtPoint:self.offset.origin withFont:self.font].width;
+#pragma GCC diagnostic warning "-Wdeprecated-declarations"
+        }
+        else {
+            r.origin.x += [clearText sizeWithAttributes:@{NSFontAttributeName:self.font}].width;
+        }
 	}
-//NSLog(@"origin: origin=%@", NSStringFromCGPoint(r.origin));	
+//NSLog(@"origin: origin=%@", NSStringFromCGPoint(r.origin));
 	
 	NSRange charsToDraw = NSMakeRange(0, [grayText length]);
 	if(charsToDraw.length) {
@@ -116,7 +110,7 @@
 //NSLog(@"origin: origin=%@", NSStringFromCGPoint(r.origin));	
 			unichar c = [grayText characterAtIndex:idx];
 			if(c == ' ') {
-				r.origin.x += offset.size.width;
+				r.origin.x += self.offset.size.width;
 				continue;
 			}
 			if(c == 'X') {
@@ -141,7 +135,7 @@
 				CGContextClosePath(context);
 				CGContextFillPath(context);
 #endif
-				r.origin.x += offset.size.width;
+				r.origin.x += self.offset.size.width;
 				continue;
 			}
 			// something else!
@@ -150,22 +144,44 @@
 		charsToDraw.location += idx;
 		charsToDraw.length -= idx;
 		if(charsToDraw.length) {
-			[[grayText substringWithRange:charsToDraw] drawAtPoint:r.origin withFont:font];
+            if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+                [[grayText substringWithRange:charsToDraw] drawAtPoint:r.origin withFont:self.font];
+#pragma GCC diagnostic warning "-Wdeprecated-declarations"
+            }
+            else {
+                [[grayText substringWithRange:charsToDraw] drawAtPoint:r.origin withAttributes:@{NSFontAttributeName:self.font}];
+            }
 		}
 	}
 }
 
+#pragma mark - Public methods
+
 - (CGFloat)widthToOffset
 {
-	NSString *startText = [text substringToIndex:showTextOffset];
-	return [startText sizeWithFont:font].width;
+	NSString *startText = [self.text substringToIndex:self.showTextOffset];
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+        return [startText sizeWithFont:self.font].width;
+#pragma GCC diagnostic warning "-Wdeprecated-declarations"
+    }
+    else {
+        return [startText sizeWithAttributes:@{NSFontAttributeName:self.font}].width;
+    }
 }
 
 - (CGFloat)widthfromOffset
 {
-	NSString *endText = [text substringWithRange:NSMakeRange(showTextOffset, [text length] - showTextOffset)];
-	return [endText sizeWithFont:font].width;
-
+	NSString *endText = [self.text substringWithRange:NSMakeRange(self.showTextOffset, [self.text length] - self.showTextOffset)];
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+        return [endText sizeWithFont:self.font].width;
+#pragma GCC diagnostic warning "-Wdeprecated-declarations"
+    }
+    else {
+        return [endText sizeWithAttributes:@{NSFontAttributeName:self.font}].width;
+    }
 }
 
 @end

@@ -529,7 +529,7 @@ NSLog(@"dict=%@ str=%@", self.dictionary, retStr);
 		label.text = @"Credit Card:";
 		label.font = [UIFont systemFontOfSize:12];
 		label.textColor = [UIColor greenColor]; // [UIColor colorWithHex:0xa8a8a8];
-		label.textAlignment = UITextAlignmentLeft;
+		label.textAlignment = NSTextAlignmentLeft;
 		label.backgroundColor = [UIColor clearColor];
 		label.tag = 1;
 		[contentView addSubview:label];
@@ -550,7 +550,7 @@ NSLog(@"dict=%@ str=%@", self.dictionary, retStr);
 		label.text = [self obscuredNumber];
 		label.font = [UIFont systemFontOfSize:14];
 		label.textColor = [UIColor greenColor]; // [UIColor colorWithHex:0xa8a8a8];
-		label.textAlignment = UITextAlignmentLeft;
+		label.textAlignment = NSTextAlignmentLeft;
 		label.backgroundColor = [UIColor clearColor];
 		label.tag = 2;
 		

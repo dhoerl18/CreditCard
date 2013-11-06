@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		578CC2341829CCC500570CB6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 578CC2331829CCC500570CB6 /* Default-568h@2x.png */; };
 		DE09D3C4144F4D1200E55142 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE09D3C2144F4D1200E55142 /* CoreText.framework */; };
 		DE09D3C5144F4D1200E55142 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE09D3C3144F4D1200E55142 /* QuartzCore.framework */; };
 		DE33215C14ED459300F92FE3 /* CreditCard.m in Sources */ = {isa = PBXBuildFile; fileRef = DE33214214ED459200F92FE3 /* CreditCard.m */; };
@@ -36,11 +37,11 @@
 		DE7119D8144F227F004DE154 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7119D7144F227F004DE154 /* Foundation.framework */; };
 		DE7119DA144F227F004DE154 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7119D9144F227F004DE154 /* CoreGraphics.framework */; };
 		DE83845914D3812200677836 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE83845414D3812200677836 /* AppDelegate.m */; };
-		DE83845A14D3812200677836 /* CreditCard-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE83845514D3812200677836 /* CreditCard-Info.plist */; };
 		DE83845B14D3812200677836 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE83845814D3812200677836 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		578CC2331829CCC500570CB6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DE09D3C2144F4D1200E55142 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		DE09D3C3144F4D1200E55142 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DE33214114ED459200F92FE3 /* CreditCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCard.h; sourceTree = "<group>"; };
@@ -172,6 +173,7 @@
 		DE83845214D3812200677836 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				578CC2331829CCC500570CB6 /* Default-568h@2x.png */,
 				DE83845314D3812200677836 /* AppDelegate.h */,
 				DE83845414D3812200677836 /* AppDelegate.m */,
 				DE83845514D3812200677836 /* CreditCard-Info.plist */,
@@ -231,11 +233,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE83845A14D3812200677836 /* CreditCard-Info.plist in Resources */,
 				DE33215E14ED459300F92FE3 /* CreditCardController.xib in Resources */,
 				DE33216014ED459300F92FE3 /* amex2.png in Resources */,
 				DE33216114ED459300F92FE3 /* amex2@2x.png in Resources */,
 				DE33216214ED459300F92FE3 /* amexBack2.png in Resources */,
+				578CC2341829CCC500570CB6 /* Default-568h@2x.png in Resources */,
 				DE33216314ED459300F92FE3 /* amexBack2@2x.png in Resources */,
 				DE33216414ED459300F92FE3 /* ccBack2.png in Resources */,
 				DE33216514ED459300F92FE3 /* ccBack2@2x.png in Resources */,
@@ -294,7 +296,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "/Volumes/Data/git/NSAttributedString-Additions-for-HTML/Classes";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -313,7 +315,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "/Volumes/Data/git/NSAttributedString-Additions-for-HTML/Classes";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -326,7 +328,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/CreditCard-Prefix.pch";
 				INFOPLIST_FILE = "Demo/CreditCard-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -338,7 +340,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/CreditCard-Prefix.pch";
 				INFOPLIST_FILE = "Demo/CreditCard-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
