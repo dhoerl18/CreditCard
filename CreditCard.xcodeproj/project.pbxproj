@@ -37,7 +37,6 @@
 		DE7119D8144F227F004DE154 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7119D7144F227F004DE154 /* Foundation.framework */; };
 		DE7119DA144F227F004DE154 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7119D9144F227F004DE154 /* CoreGraphics.framework */; };
 		DE83845914D3812200677836 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE83845414D3812200677836 /* AppDelegate.m */; };
-		DE83845A14D3812200677836 /* CreditCard-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE83845514D3812200677836 /* CreditCard-Info.plist */; };
 		DE83845B14D3812200677836 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE83845814D3812200677836 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -234,7 +233,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE83845A14D3812200677836 /* CreditCard-Info.plist in Resources */,
 				DE33215E14ED459300F92FE3 /* CreditCardController.xib in Resources */,
 				DE33216014ED459300F92FE3 /* amex2.png in Resources */,
 				DE33216114ED459300F92FE3 /* amex2@2x.png in Resources */,
