@@ -88,9 +88,16 @@
 //NSLog(@"origin: origin=%@", NSStringFromCGPoint(r.origin));	
 	if([clearText length]) {
 //NSLog(@"ORIGIN=%@ DRAWSIZE=%@ SIZESIZE=%@", NSStringFromCGPoint(offset.origin), NSStringFromCGSize([clearText drawAtPoint:offset.origin withFont:font]), NSStringFromCGSize([clearText sizeWithFont:font]) );
-		r.origin.x += [clearText drawAtPoint:self.offset.origin withFont:self.font].width;
+        if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+            r.origin.x += [clearText drawAtPoint:self.offset.origin withFont:self.font].width;
+#pragma GCC diagnostic warning "-Wdeprecated-declarations"
+        }
+        else {
+            r.origin.x += [clearText sizeWithAttributes:@{NSFontAttributeName:self.font}].width;
+        }
 	}
-//NSLog(@"origin: origin=%@", NSStringFromCGPoint(r.origin));	
+//NSLog(@"origin: origin=%@", NSStringFromCGPoint(r.origin));
 	
 	NSRange charsToDraw = NSMakeRange(0, [grayText length]);
 	if(charsToDraw.length) {
@@ -137,7 +144,14 @@
 		charsToDraw.location += idx;
 		charsToDraw.length -= idx;
 		if(charsToDraw.length) {
-			[[grayText substringWithRange:charsToDraw] drawAtPoint:r.origin withFont:self.font];
+            if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+                [[grayText substringWithRange:charsToDraw] drawAtPoint:r.origin withFont:self.font];
+#pragma GCC diagnostic warning "-Wdeprecated-declarations"
+            }
+            else {
+                [[grayText substringWithRange:charsToDraw] drawAtPoint:r.origin withAttributes:@{NSFontAttributeName:self.font}];
+            }
 		}
 	}
 }
@@ -147,13 +161,27 @@
 - (CGFloat)widthToOffset
 {
 	NSString *startText = [self.text substringToIndex:self.showTextOffset];
-	return [startText sizeWithFont:self.font].width;
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+        return [startText sizeWithFont:self.font].width;
+#pragma GCC diagnostic warning "-Wdeprecated-declarations"
+    }
+    else {
+        return [startText sizeWithAttributes:@{NSFontAttributeName:self.font}].width;
+    }
 }
 
 - (CGFloat)widthfromOffset
 {
 	NSString *endText = [self.text substringWithRange:NSMakeRange(self.showTextOffset, [self.text length] - self.showTextOffset)];
-	return [endText sizeWithFont:self.font].width;
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+        return [endText sizeWithFont:self.font].width;
+#pragma GCC diagnostic warning "-Wdeprecated-declarations"
+    }
+    else {
+        return [endText sizeWithAttributes:@{NSFontAttributeName:self.font}].width;
+    }
 }
 
 @end
