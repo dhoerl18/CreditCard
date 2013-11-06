@@ -31,7 +31,7 @@
  *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-typedef enum { Visa=0, MasterCard, AMEX, Discover, DinersClub, InvalidCard } creditCardType;
+typedef NS_ENUM(NSInteger, creditCardType) { Visa=0, MasterCard, AMEX, Discover, DinersClub, InvalidCard };
 
 #define CC_LEN_FOR_TYPE		4	// number of characters to determine length
 
